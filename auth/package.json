@@ -6,12 +6,19 @@
 	"scripts": {
 		"build": "tsc",
 		"build:watch": "tsc -w",
-		"start": "pm2 start dist/app.js --name=\"API User Auth\" -- start "
+		"start": "pm2 start -f dist/app.js --name=\"$npm_package_sysauth_appname\""
+	},
+	"sysauth": {
+		"appname": "[REST] - User Auth",
+		"appport": 28082
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"@types/express": "^4.16.0",
-		"express": "^4.16.3"
+		"@types/jest": "^23.3.1",
+		"@types/node": "^10.9.4",
+		"express": "^4.16.3",
+		"typescript": "^3.1.4"
 	}
 }
