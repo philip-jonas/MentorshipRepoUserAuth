@@ -19,4 +19,5 @@ export class App {
         this.app.listen(process.env.PORT_AUTH_API || 3001);
     }
 }
+
 new App();
