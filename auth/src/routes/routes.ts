@@ -9,16 +9,18 @@ export class Routes {
 
     public routes(app: any): void{
         app.route('/auth').post((req: Request, res: Response) => {
-            res.status(200).send({})
+            res.status(200).json({})
         });
+
         app.route('/auth/registration').post((req: Request, res:Response) => {
-            res.status(res.statusCode).send({});
+            res.status(res.statusCode).json({});
         });
+
         app.route('/auth/login').post((req: Request, res:Response) => {
-            res.status(res.statusCode).send(req.body);
+            res.status(res.statusCode).json(req.body);
         });
         app.route('/auth/logout').post((req: Request, res:Response) => {
-            res.status(res.statusCode).send({});
+            res.status(res.statusCode).json({});
         });
     }
 }

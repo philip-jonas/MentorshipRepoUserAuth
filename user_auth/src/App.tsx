@@ -1,10 +1,6 @@
 import * as React from "react";
-import { Container, Header, Grid } from "semantic-ui-react";
-import styled from "styled-components";
-
-const ContainerPadding = styled.div`
-  padding: 15px;
-`;
+import {Link, Route} from 'react-router-dom';
+import { Container, Grid, Button } from "semantic-ui-react";
 
 class App extends React.Component {
   public render() {
@@ -14,8 +10,12 @@ class App extends React.Component {
           <Grid columns={1} padded={true}>
             <Grid.Row>
               <Grid.Column>
-                <Header as="h2">USER LOGIN</Header>
-                <Header as="h2">USER REGISTRATION</Header>
+
+                {/* ROUTER SEGMENT */}
+                <Button content='A LINK' as={Link} to={'/aaaaaa'} />
+                <Route path='/aaaaaa' exact={true} />
+
+
               </Grid.Column>
             </Grid.Row>
           </Grid>
